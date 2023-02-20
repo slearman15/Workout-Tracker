@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class WorkoutPage extends StatefulWidget {
   const WorkoutPage({super.key});
@@ -8,26 +9,75 @@ class WorkoutPage extends StatefulWidget {
 }
 
 class WorkoutPageState extends State<WorkoutPage> {
+
+  void startWorkout() {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoActionSheet(
+          title: const Text('Select an option'),
+          actions: [
+            CupertinoActionSheetAction(
+              child: const Text('Option 1'),
+              onPressed: () {
+                // code for option 1
+                Navigator.pop(context);
+              },
+            ),
+            CupertinoActionSheetAction(
+              child: const Text('Option 2'),
+              onPressed: () {
+                // code for option 2
+                Navigator.pop(context);
+              },
+            ),
+          ],
+          cancelButton: CupertinoActionSheetAction(
+            child: const Text('Cancel'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: AppBar(
-        title: const Text('Workout Page'),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.add),
-              onPressed: () => {},
-            ),
-        ],
         backgroundColor: Colors.blue,
       ),
 
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-
-        ),
+      bottomNavigationBar:BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Container(),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Center(
+              child: CupertinoButton(
+              padding: EdgeInsets.zero,
+                onPressed: startWorkout,
+                child: const Text('Begin Workout',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Container(),
+            label: '',
+          ),
+        ],
       ),
     );
   }
