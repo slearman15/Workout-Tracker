@@ -18,14 +18,14 @@ class WorkoutPageState extends State<WorkoutPage> {
           title: const Text('Select an option'),
           actions: [
             CupertinoActionSheetAction(
-              child: const Text('Option 1'),
+              child: const Text('Blank Workout'),
               onPressed: () {
                 // code for option 1
                 Navigator.pop(context);
               },
             ),
             CupertinoActionSheetAction(
-              child: const Text('Option 2'),
+              child: const Text('Repeat Workout'),
               onPressed: () {
                 // code for option 2
                 Navigator.pop(context);
