@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class WorkoutPage extends StatefulWidget {
-  const WorkoutPage({super.key});
+import 'navigation.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  WorkoutPageState createState() => WorkoutPageState();
+  HomePageState createState() => HomePageState();
 }
 
-class WorkoutPageState extends State<WorkoutPage> {
+class HomePageState extends State<HomePage> {
 
   void startWorkout() {
     showCupertinoModalPopup(
@@ -20,8 +22,8 @@ class WorkoutPageState extends State<WorkoutPage> {
             CupertinoActionSheetAction(
               child: const Text('Blank Workout'),
               onPressed: () {
-                // code for option 1
                 Navigator.pop(context);
+                navToBlankWorkoutPage(context);
               },
             ),
             CupertinoActionSheetAction(
@@ -48,6 +50,7 @@ class WorkoutPageState extends State<WorkoutPage> {
     return Scaffold(
 
       appBar: AppBar(
+        title: const Text('Workouts'),
         backgroundColor: Colors.blue,
       ),
 
