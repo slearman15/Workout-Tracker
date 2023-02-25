@@ -52,6 +52,7 @@ class WorkoutPageState extends State<WorkoutPage> {
       ),
 
       bottomNavigationBar:BottomNavigationBar(
+        selectedIconTheme: const IconThemeData(size: 15),
         items: [
           BottomNavigationBarItem(
             icon: Container(),
