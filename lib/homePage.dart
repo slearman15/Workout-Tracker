@@ -50,6 +50,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
 
       appBar: AppBar(
+        title: const Text('Workouts'),
         backgroundColor: Colors.blue,
       ),
 

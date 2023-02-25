@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'navigation.dart';
-
-class BlankWorkoutPage extends StatefulWidget {
-  const BlankWorkoutPage({super.key});
+class AddExercisePage extends StatefulWidget {
+  const AddExercisePage({super.key});
 
   @override
-  BlankWorkoutPageState createState() => BlankWorkoutPageState();
+  AddExercisePageState createState() => AddExercisePageState();
 }
 
-class BlankWorkoutPageState extends State<BlankWorkoutPage> {
+class AddExercisePageState extends State<AddExercisePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -21,11 +18,11 @@ class BlankWorkoutPageState extends State<BlankWorkoutPage> {
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text('New Workout'),
+        title: const Text('Add an Exercise'),
         actions: [
           IconButton(
-              icon: const Icon(Icons.add),
-              onPressed: () => navToAddExercisePage(context),
+            icon: const Icon(Icons.search),
+            onPressed: () => {},
           )
         ],
       ),
