@@ -30,6 +30,8 @@ class AddExercisePageState extends State<AddExercisePage> {
 
   @override
   Widget build(BuildContext context) {
+    db.exerciseList.sort();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
