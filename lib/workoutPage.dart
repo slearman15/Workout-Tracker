@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'navigation.dart';
 
-class BlankWorkoutPage extends StatefulWidget {
-  const BlankWorkoutPage({super.key});
+class WorkoutPage extends StatefulWidget {
+  const WorkoutPage({super.key});
 
   @override
-  BlankWorkoutPageState createState() => BlankWorkoutPageState();
+  WorkoutPageState createState() => WorkoutPageState();
 }
 
-class BlankWorkoutPageState extends State<BlankWorkoutPage> {
+class WorkoutPageState extends State<WorkoutPage> {
 
   @override
   Widget build(BuildContext context) {
