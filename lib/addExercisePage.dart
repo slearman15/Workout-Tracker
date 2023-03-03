@@ -18,7 +18,7 @@ class AddExercisePageState extends State<AddExercisePage> {
 
   @override
   void initState() {
-    //if this is first time opening app, create default data
+
     if (_exerciseBox.get("EXERCISE_LIST") == null) {
       db.createInitData();
     } else {

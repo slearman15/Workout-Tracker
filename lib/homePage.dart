@@ -23,7 +23,7 @@ class HomePageState extends State<HomePage> {
               child: const Text('Blank Workout'),
               onPressed: () {
                 Navigator.pop(context);
-                navToBlankWorkoutPage(context);
+                navToWorkoutPage(context);
               },
             ),
             CupertinoActionSheetAction(
