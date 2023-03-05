@@ -29,7 +29,6 @@ class HomePageState extends State<HomePage> {
             CupertinoActionSheetAction(
               child: const Text('Repeat Workout'),
               onPressed: () {
-                // code for option 2
                 Navigator.pop(context);
               },
             ),
