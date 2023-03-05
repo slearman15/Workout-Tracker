@@ -3,6 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'database.dart';
 import 'exerciseTile.dart';
+import 'exerciseSearchDelegate.dart';
 
 class AddExercisePage extends StatefulWidget {
   const AddExercisePage({super.key});
@@ -29,6 +30,8 @@ class AddExercisePageState extends State<AddExercisePage> {
 
   @override
   Widget build(BuildContext context) {
+    db.exerciseList.sort();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -40,7 +43,9 @@ class AddExercisePageState extends State<AddExercisePage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () => {},
+            onPressed: () {
+              showSearch(context: context, delegate: ExerciseSearchDelegate(db));
+            },
           )
         ],
       ),
