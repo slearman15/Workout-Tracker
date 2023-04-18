@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'database.dart';
-import 'exerciseTile.dart';
 
 class ExerciseSearchDelegate extends SearchDelegate<String> {
   final ExerciseDatabase db;
@@ -25,7 +24,8 @@ class ExerciseSearchDelegate extends SearchDelegate<String> {
     return IconButton(
       icon: const Icon(Icons.arrow_back),
       onPressed: () {
-        close(context, '');
+        Navigator.of(context).pop();
+        Navigator.of(context).pop();
       },
     );
   }
@@ -38,8 +38,8 @@ class ExerciseSearchDelegate extends SearchDelegate<String> {
       itemCount: results.length,
       itemBuilder: (context, index) {
         final exercise = results[index];
-        return ExerciseTile(
-          exerciseName: exercise,
+        return ListTile(
+            title: exercise,
         );
       },
     );
@@ -56,7 +56,6 @@ class ExerciseSearchDelegate extends SearchDelegate<String> {
         return ListTile(
           title: Text(exercise),
           onTap: () {
-            close(context, exercise);
           },
         );
       },

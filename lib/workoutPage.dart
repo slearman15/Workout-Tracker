@@ -29,6 +29,15 @@ class WorkoutPageState extends State<WorkoutPage> {
           )
         ],
       ),
+
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: const Text(
+          "You have not logged any exercises yet. Please add a new exercise by clicking the Add-icon in the top right.",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 15),
+        ),
+      ),
     );
   }
 }
