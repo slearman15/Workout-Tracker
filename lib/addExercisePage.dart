@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'database.dart';
-import 'exerciseTile.dart';
 import 'exerciseSearchDelegate.dart';
 
 class AddExercisePage extends StatefulWidget {
@@ -59,8 +58,10 @@ class AddExercisePageState extends State<AddExercisePage> {
                 shrinkWrap: true,
                 itemCount: db.exerciseList.length,
                 itemBuilder: (context, index) {
-                  return ExerciseTile(
-                    exerciseName: db.exerciseList[index],
+                  return ListTile(
+                    title: Text(db.exerciseList[index]),
+                    onTap: () {
+                    },
                   );
                 },
               ),
